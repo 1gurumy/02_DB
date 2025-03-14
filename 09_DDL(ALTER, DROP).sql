@@ -187,7 +187,7 @@ CREATE TABLE TB2(
 	TB2_COL NUMBER REFERENCES TB1 -- TB1 테이블 참조. 참조될 대상 컬럼을 입력하지 않았으므로 자동으로 TB1의 기본키PK를 참조함.
 );	-- 부모 TB1 테이블 참조하는 역할의 자식 테이블
 
--- TB1에 샘플 데이터 삽입
+-- TB1에 샘플 데이터 삽입C
 INSERT INTO TB1 VALUES(1, 100);
 INSERT INTO TB1 VALUES(2, 200);
 INSERT INTO TB1 VALUES(3, 300);
