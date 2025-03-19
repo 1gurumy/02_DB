@@ -251,6 +251,8 @@ SELECT * FROM TB2;
 -- 롤백 안 된거 확인 가능. 위에서 DDL 구문 중 ALTER를 사용해서
 -- 그 시점에 강제 COMMIT 되었기 때문에
 
-
+SELECT * FROM EMPLOYEE;
+SELECT * FROM DEPARTMENT;
+SELECT * FROM JOB;
 
 
