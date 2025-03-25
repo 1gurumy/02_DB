@@ -137,10 +137,16 @@ SELECT * FROM kh.DEPARTMEMT;		-- 조회 안 된다
 REVOKE SELECT ON EMPLOYEE FROM yjk_sample;
 
 -- 5. (sample) EMPLOYEE테이블 조회 권한 회수 됬는지 확인해보기
-REVOKE SELECT ON EMPLOYEE FROM yjk_sample; --> 조회 안 됨. 
+SELECT * FROM EMPLOYEE; --> 조회 안 됨. 
 
+-------------------------------------------------------------
 
+--DEPT_CODE가 D9이거나 D6이고 SALARY이 300만원 이상이고 BONUS가 있고
+--남자이고 이메일주소가 _ 앞에 3글자 있는
+--사원의 EMP_NAME, EMP_NO, DEPT_CODE, SALARY를 조회
 
-
-
+SELECT EMP_NAME, EMP_NO, DEPT_CODE, SALARY
+FROM EMPLOYEE
+WHERE DEPT_CODE='D9' OR DEPT_CODE='D6' AND SALARY > 3000000
+AND EMAIL LIKE '____%' AND BONUS IS NULL;
 

@@ -6,6 +6,7 @@
 
 -- 함수는 SELECT 문의
 -- SELECT절, WHERE절, ORDER BY절, GROUP BY절, HAVING절 사용 가능
+--> FROM절 빼고 다 사용 가능.
 
 ---------------------------단일 행 함수--------------------------------
 
@@ -33,6 +34,9 @@ SELECT INSTR('AABAACAABBAA', 'B', 5) FROM DUAL; -- 9
 
 -- 문자열을 5번째 문자부터 검색해서 두번째 B의 위치 조회
 SELECT INSTR('AABAACAABBAA', 'B', 5, 2) FROM DUAL; -- 10
+
+SELECT INSTR('AABAACAABBAABAA', 'AA', 5, 2) FROM DUAL;
+-- 'AA'문자열을 5번째 글자부터 검색해서 2번째에 있는 'AA' 문자열 위치 조회
 
 -- EMPLOYEE 테이블에서 사원명, 이메일, 이메일 중 '@' 위치 조회
 SELECT EMP_NAME, EMAIL, INSTR(EMAIL, '@')
